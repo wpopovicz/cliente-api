@@ -5,7 +5,7 @@
  */
 package br.com.ligueTelecom.Bean;
 
-import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 //@Entity
 //@Table(name = "CLIENTE")
 @XmlRootElement
-public class Cliente implements Serializable {
+public class Cliente {
 
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)
@@ -77,22 +77,27 @@ public class Cliente implements Serializable {
         this.cpf = cpf;
     }
     
-    @Override
-	public String toString() {
-		StringBuilder cliente = new StringBuilder();
-		cliente.append("{ ");
-		cliente.append(getId());
-		cliente.append(", ");
-		cliente.append(getName());
-		cliente.append(", ");
-		cliente.append(getEmail());
-		cliente.append(", ");
-		cliente.append(getRg());
-		cliente.append(", ");
-                cliente.append(getCpf());
-		cliente.append(" }");
+//    @Override
+//	public String toString() {
+//		StringBuilder cliente = new StringBuilder();
+//		cliente.append("{ ");
+//		cliente.append(getId());
+//		cliente.append(", ");
+//		cliente.append(getName());
+//		cliente.append(", ");
+//		cliente.append(getEmail());
+//		cliente.append(", ");
+//		cliente.append(getRg());
+//		cliente.append(", ");
+//                cliente.append(getCpf());
+//		cliente.append(" }");
+//
+//		return cliente.toString();
+//	}    
 
-		return cliente.toString();
-	}    
+    @Override
+    public String toString() {
+        return "Cliente{" + "id=" + id + ", name=" + name + ", email=" + email + ", rg=" + rg + ", cpf=" + cpf + '}';
+    }
     
 }
